@@ -1,13 +1,16 @@
 package wasi:gpio@0.2.0;
 
-// Delay interface for wasi:gpio, inspired by Arduino's delay() and delayMicroseconds() functions
+/// Delay interface for wasi:gpio, inspired by Arduino's delay() and delayMicroseconds() functions
 interface delay {
-    // Pause the execution of the component for atleast 'ns' seconds, longer is possible in case that's needed due to precision errors in the internal clock
-    delay-ns: func(ns: u32);
-
-    // Pause the execution of the component for atleast 'us' seconds, longer is possible in case that's needed due to precision errors in the internal clock
-    delay-us: func(us: u32);
-
-    // Pause the execution of the component for atleast 'ms' seconds, longer is possible in case that's needed due to precision errors in the internal clock
-    delay-ms: func(ms: u32);
+    /// Delay resource that allows the component to delay its execution
+    resource delay {
+        /// Pause the execution of the component for atleast 'ns' seconds, longer is possible in case that's needed due to precision errors in the internal clock
+        delay-ns: func(ns: u64);
+        
+        /// Pause the execution of the component for atleast 'us' seconds, longer is possible in case that's needed due to precision errors in the internal clock
+        delay-us: func(us: u64);
+        
+        /// Pause the execution of the component for atleast 'ms' seconds, longer is possible in case that's needed due to precision errors in the internal clock
+        delay-ms: func(ms: u64);
+    }
 }

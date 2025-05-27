@@ -4,7 +4,7 @@ A proposed [WebAssembly System Interface](https://github.com/WebAssembly/WASI) A
 
 ### Current Phase
 
-[Fill in the current phase, e.g. Phase 1]
+wasi-gpio is currently in [Phase 1](https://github.com/WebAssembly/WASI/blob/main/Proposals.md#phase-1---proposed-spec-text-available-cg--wg)
 
 ### Champions
 
